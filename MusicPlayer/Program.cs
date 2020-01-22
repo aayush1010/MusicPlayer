@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MusicPlayer
+﻿namespace MusicPlayer
 {
     class Program
     {
