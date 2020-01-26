@@ -4,7 +4,7 @@ namespace MusicPlayer
 {
     public interface IMusicLibrary
     {
-        public void UpdateMusicLibrary(InternationalMusicLibrary internationMusicLibrary);
+        public void UpdateMusicLibrary();
 
         List<Song> GetAllSongs();
     }

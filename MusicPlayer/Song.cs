@@ -16,5 +16,10 @@ namespace MusicPlayer
             this.genre = genre;
             this.releaseDate = DateTime.Now;
         }
+
+        public string SongName() 
+        {
+            return this.name;
+        }
     }
 }

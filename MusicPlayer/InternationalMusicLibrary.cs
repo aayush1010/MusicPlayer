@@ -47,7 +47,7 @@ namespace MusicPlayer
             songs.Add(song);
             foreach (var library in musicLibrariesToBeUpdated) 
             {
-                library.UpdateMusicLibrary(this);
+                library.UpdateMusicLibrary();
             }
         }
     }

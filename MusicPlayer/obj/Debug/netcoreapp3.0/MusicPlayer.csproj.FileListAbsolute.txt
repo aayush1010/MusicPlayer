@@ -1,0 +1,3 @@
+D:\test\MusicPlayer\MusicPlayer\obj\Debug\netcoreapp3.0\MusicPlayer.csprojAssemblyReference.cache
+D:\test\MusicPlayer\MusicPlayer\obj\Debug\netcoreapp3.0\MusicPlayer.AssemblyInfoInputs.cache
+D:\test\MusicPlayer\MusicPlayer\obj\Debug\netcoreapp3.0\MusicPlayer.AssemblyInfo.cs
