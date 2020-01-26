@@ -1,16 +1,27 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace MusicPlayer
 {
     public class MusicPlayer
     {
-        private readonly MusicLibrary musicLibrary = null;
         private List<Song> favoriteSongs = null;
+        private List<Song> allSongs = null;
+        private List<IMusicLibrary> allLibraries;
 
         public MusicPlayer() 
         {
-            musicLibrary = new MusicLibrary();
+            allLibraries = new List<IMusicLibrary> { new AppMusicLibrary() };
             favoriteSongs = new List<Song>();
+            GetAllSongs();
+        }
+
+        private void GetAllSongs()
+        {
+            foreach (var library in allLibraries) 
+            {
+                allSongs.AddRange(library.GetAllSongs());
+            }
         }
 
         public void AddSongToFavorite(Song song) 

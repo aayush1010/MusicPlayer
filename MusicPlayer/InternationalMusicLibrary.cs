@@ -10,8 +10,11 @@ namespace MusicPlayer
 
         private static object obj = new object();
 
+        private List<IMusicLibrary> musicLibrariesToBeUpdated;
+
         private InternationalMusicLibrary() 
         {
+            musicLibrariesToBeUpdated = new List<IMusicLibrary>();
         }
 
         public static InternationalMusicLibrary GetInternationalMusicLibraryInstance() 
@@ -29,9 +32,23 @@ namespace MusicPlayer
             return instance;
         }
 
+        public List<Song> GetSongs() 
+        {
+            return this.songs;
+        }
+
+        public void Subscribe(IMusicLibrary musicLibrary) 
+        {
+            musicLibrariesToBeUpdated.Add(musicLibrary);
+        }
+
         public void AddSong(Song song) 
         {
             songs.Add(song);
+            foreach (var library in musicLibrariesToBeUpdated) 
+            {
+                library.UpdateMusicLibrary(this);
+            }
         }
     }
 }

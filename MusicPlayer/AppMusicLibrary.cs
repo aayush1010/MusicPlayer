@@ -6,9 +6,19 @@ namespace MusicPlayer
     {
         private List<Song> songs { get; set; }
 
-        public void UpdateMusicLibrary(InternationMusicLibrary internationMusicLibrary)
+        public AppMusicLibrary()
         {
+            songs = new List<Song>();
+        }
 
+        public void UpdateMusicLibrary(InternationalMusicLibrary internationMusicLibrary)
+        {
+            songs = internationMusicLibrary.GetSongs();
+        }
+
+        public List<Song> GetAllSongs()
+        {
+            return this.songs;
         }
     }
 }
