@@ -3,12 +3,12 @@
 ## Problem Statement
 
 Model a music player that can:
-1. Aggregate songs across multiple libraries — **Done**
-2. Play songs in order — **Done**
-3. Play a random song — **Done**
-4. Maintain a favorites list — **In progress**
-5. Play from favorites — **TODO**
-6. Support multiple music companies/labels producing songs — **TODO** (interface defined, not wired up)
+1. Aggregate songs across multiple libraries
+2. Play songs in order
+3. Play a random song
+4. Maintain a favorites list
+5. Play from favorites
+6. Support multiple music companies/labels producing songs
 
 ## Design
 
